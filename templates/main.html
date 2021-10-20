@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="content-type" content = "text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>The Hyena Page</title>
+        <style>            
+            body{
+                margin:1em auto;
+                max-width:40em;
+                padding:0 .62em;
+                font:1.2em/1.62 sans-serif;
+            }
+            h1,h2,h3 {
+                line-height:1.2;
+            }
+            @media print{
+                body{
+                    max-width:none
+                }
+            }
+            .aligncenter {
+                text-align: center;
+            }
+            .form-submit-button {
+                background:white;
+                color:black;
+                border:1pxsolidrgb(0, 0, 0);
+                border-radius:5px;
+                box-shadow:2px5px5p(0, 0, 0);
+                text-shadow:none;
+                font:0.8em/1.62 sans-serif;
+            }
+            .form-submit-button:hover {
+                background:slategray;
+                color:#fff;
+                border:1pxsolidrgb(0, 0, 0);
+                border-radius:5px;
+                box-shadow:2px5px5p(0, 0, 0);
+                text-shadow:none;
+                font:0.8em/1.62 sans-serif;
+            } 
+        </style>
+    </head>
+    <body>
+        <article>
+            <p class="aligncenter">
+                <img src="https://cdn.discordapp.com/attachments/95719762276913152/892087555036692500/DeficientAshamedIggypops-max-1mb.gif" alt="arcanine!" />
+            </p>
+            <h1>
+                About
+            </h1>
+            <p>
+                Hello, my name is Jay! This is a quick little website I wrote to put down links to my stuff. This website is a bit rough but I'll make it better some day.
+            </p>
+            <p>
+                I'm a programmer from Thailand and I do stuff. I graduated from the University of Edinburgh in 2020 with an Honours degree in Psychology—but I sure as hell am not using it properly!
+            </p>
+            <p>
+                I do backend development and data engineering for living, and I'm doing my best to learn more! I do most of my stuff in Python, NodeJS, and also Go.
+            </p>
+            <p>
+                I'm most active on Discord, so if you want to reach out, you can hit me up there.
+            </p>
+            <ul>
+                <li>
+                    GitHub: <a href="https://github.com/arcsolace">github/arcsolace</a>
+                </li>
+                <li>
+                    SoundCloud: <a href="https://soundcloud.com/arcanines">arcanines</a>
+                </li>
+                <li>
+                    Discord: jay#9001
+                </li>
+                <li>
+                    Spotify: <a href="https://open.spotify.com/user/takesolace?si=a4207f2a148c4037">takesolace</a>
+                </li>
+            </ul>
+            <h2>
+                Other stuff...
+            </h2>
+            <p>This website is a work in progress, but is served using golang and html. Nothing too fancy!</p>
+            <p>I'm going to add a portfolio here at some point.</p>
+            <h2>
+                Links
+            </h2>
+            <p>Coming soon...</p>
+            <p></p>
+        </article>
+        <article>
+            <h1>Contact me</h1>
+                <form action="/" method="post" novalidate>
+                <div>
+                    <label style="font-size:18px;">Email Address:</label>
+                    <input type="email" name="email" value="{{ .Email }}" required>
+                </div>
+                <div>
+                    <label style="font-size:18px;">Name:</label>
+                    <input type="name" name="name" value="{{ .Name }}" required>
+                </div>
+                <div>
+                    <label style="font-size:18px;">Message:</label>
+                    <input type="text" name="content" value="{{ .Content }}" required>
+                </div>
+                <p> </p>
+                <div>
+                    <input class="form-submit-button" type="submit" value="Submit">
+                </div>
+            </form>
+            <p class="aligncenter">
+                <img src="https://cdn.discordapp.com/attachments/95719762276913152/892087434370744360/transpyeendithered.png" alt="it's just a hyena..." />
+            </p>
+        </article>
+    </body>
+</html>
