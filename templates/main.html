@@ -6,6 +6,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>The Hyena Page</title>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <style>            
             body{
                 margin:1em auto;
@@ -72,7 +73,7 @@
                     SoundCloud: <a href="https://soundcloud.com/arcanines">arcanines</a>
                 </li>
                 <li>
-                    Discord: jay#9001
+                    Discord: puppy#1337
                 </li>
                 <li>
                     YouTube: <a href="https://www.youtube.com/channel/UCTsOhTO1ryQjNV6B-LV4Kyw">jay kh.</a>
@@ -110,10 +111,10 @@
                     <label style="font-size:18px;">Message:</label>
                     <input type="text" name="content" value="{{ .Content }}" required>
                 </div>
-                <p> </p>
-                <div>
-                    <input class="form-submit-button" type="submit" value="Submit">
-                </div>
+                <p> </p><html>
+                <div class="g-recaptcha" data-sitekey="{{ .Key }}"></div>
+                <br/>
+                <input class="form-submit-button" type="submit" value="Submit">
             </form>
             <p class="aligncenter">
                 <img src="https://cdn.discordapp.com/attachments/95719762276913152/892087434370744360/transpyeendithered.png" alt="it's just a hyena..." />

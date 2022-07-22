@@ -21,6 +21,10 @@ type Message struct {
 	Content string
 }
 
+type Page struct {
+	Key string
+}
+
 func main() {
 	port := os.Getenv("PORT")
 
@@ -36,7 +40,10 @@ func main() {
 }
 
 func index(w http.ResponseWriter, r *http.Request) {
-	render(w, "templates/main.html", nil)
+	data := &Page{
+		Key: os.Getenv("DATA_SITEKEY"),
+	}
+	render(w, "templates/main.html", data)
 }
 
 func confirmation(w http.ResponseWriter, r *http.Request) {
@@ -69,6 +76,7 @@ func send(w http.ResponseWriter, r *http.Request) {
 	} else {
 		pwd := os.Getenv("MAIL_PASSWORD")
 		email := os.Getenv("EMAIL")
+
 		msg := gomail.NewMessage()
 		msg.SetHeader("From", fmt.Sprintf("Jay <%s>", email))
 		msg.SetHeader("To", fmt.Sprintf("Jay <%s>", email))
