@@ -19,6 +19,7 @@ type Message struct {
 	Name    string
 	Email   string
 	Content string
+	Key     string
 }
 
 type Page struct {
@@ -40,10 +41,7 @@ func main() {
 }
 
 func index(w http.ResponseWriter, r *http.Request) {
-	data := &Page{
-		Key: os.Getenv("DATA_SITEKEY"),
-	}
-	render(w, "templates/main.html", data)
+	render(w, "templates/main.html", nil)
 }
 
 func confirmation(w http.ResponseWriter, r *http.Request) {
@@ -69,6 +67,7 @@ func send(w http.ResponseWriter, r *http.Request) {
 		Name:    r.FormValue("name"),
 		Email:   r.FormValue("email"),
 		Content: r.FormValue("content"),
+		Key:     os.Getenv("DATA_SITEKEY"),
 	}
 
 	if m.Name == "" || m.Email == "" || m.Content == "" {
